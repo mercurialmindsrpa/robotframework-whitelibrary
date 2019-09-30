@@ -6,6 +6,7 @@ pipeline {
         stage('Read Email') {
           steps {
             echo 'Reading Email'
+            writeFile(file: 'kjkj', text: 'ktext', encoding: 'enc')
           }
         }
         stage('Match Text') {
