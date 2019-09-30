@@ -4,6 +4,9 @@ pipeline {
     stage('Read Email') {
       parallel {
         stage('Read Email') {
+          environment {
+            downloadfile = ''
+          }
           steps {
             echo 'Reading Email'
             writeFile(file: 'kjkj', text: 'ktext', encoding: 'enc')
@@ -48,6 +51,9 @@ pipeline {
           }
         }
         stage('Structure -TXT to XLS') {
+          environment {
+            downloadfilepath = 'C:\\Users\\User\\Desktop'
+          }
           steps {
             echo 'Structuring Data TXT to XLS'
           }
