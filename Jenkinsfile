@@ -5,18 +5,17 @@ pipeline {
       parallel {
         stage('Read Email') {
           steps {
-            echo 'Hello'
+            echo 'Reading Email'
           }
         }
         stage('Match Text') {
           steps {
-            echo 'mn'
+            echo 'Matching Text'
           }
         }
         stage('Move to Folder') {
           steps {
-            sleep 1
-            sleep 1
+            echo 'Moving Email to Folder'
           }
         }
       }
@@ -25,12 +24,12 @@ pipeline {
       parallel {
         stage('Download Attachment') {
           steps {
-            echo 'aws'
+            echo 'Download Attachment'
           }
         }
         stage('Download Email Attachment') {
           steps {
-            sleep 1
+            echo 'Downloading Email Attachment'
           }
         }
       }
@@ -39,17 +38,17 @@ pipeline {
       parallel {
         stage('Format Data') {
           steps {
-            sleep 1
+            echo 'Format Data'
           }
         }
         stage('OCR - PDF to Text') {
           steps {
-            sleep 1
+            echo 'Performing OCR'
           }
         }
         stage('Structure -TXT to XLS') {
           steps {
-            sleep 1
+            echo 'Structuring Data TXT to XLS'
           }
         }
       }
