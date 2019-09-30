@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('test') {
       parallel {
@@ -20,5 +20,8 @@ pipeline {
         echo 'aws'
       }
     }
+  }
+  environment {
+    data = '12as'
   }
 }
